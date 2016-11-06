@@ -1,6 +1,4 @@
-from flask import Flask
-
-app = Flask(__name__)
+from app import app
 
 
 @app.route('/')
@@ -8,8 +6,8 @@ def defaultpath():
     return "This domain is currently not working. Please try back later."
 
 
-@app.route('/pf-api/v1.0/maker/location/<string:person>/<string:event>/<string:location>')
-@app.route('/pf-api/v1.0/maker/location/<string:person>/<string:event>/<string:location>/<path:coordinates>')
+@app.route('/itattt/v1.0/maker/location/<string:person>/<string:event>/<string:location>')
+@app.route('/itattt/v1.0/maker/location/<string:person>/<string:event>/<string:location>/<path:coordinates>')
 def location_sms(person, event, location, coordinates=None):
     action = person + "_" + event + "_" + location
 
